@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../foodMenu.ts"],
+  "sourcesContent": ["import {WhopperJrCroissant, Whopper, BaconKing} from './picturesURLs';\n\nexport class FoodCard \n{\n  id:number;\n  name:string;\n  picture:string;\n  price:number;\n  number:number;\n  calories:string;\n  favourite:boolean;\n  constructor(id:number,name:string, picture:string, price:number, calories:string)\n  {\n    this.id=id;\n    this.name=name;\n    this.picture=picture;\n    this.price=price;\n    this.calories=calories;\n    this.number=1;\n    this.favourite=false;\n  }\n}\n\nexport const food = \n[\n  new FoodCard(1,'Whopper Jr. Croissant',WhopperJrCroissant,1.11,'410 Kcal'),\n  new FoodCard(2,'Whopper',Whopper,2.22,'669 Kcal'),\n  new FoodCard(3,'Bacon King',BaconKing,3.33,'1193 Kcal'),\n]\nexport const order = []\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,0BAAqD;AAE9C,eACP;AAAA,EACE;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA,YAAY,IAAU,MAAa,SAAgB,OAAc,UACjE;AACE,SAAK,KAAG;AACR,SAAK,OAAK;AACV,SAAK,UAAQ;AACb,SAAK,QAAM;AACX,SAAK,WAAS;AACd,SAAK,SAAO;AACZ,SAAK,YAAU;AAAA;AAAA;AAIZ,MAAM,OACb;AAAA,EACE,IAAI,SAAS,GAAE,yBAAwB,wCAAmB,MAAK;AAAA,EAC/D,IAAI,SAAS,GAAE,WAAU,6BAAQ,MAAK;AAAA,EACtC,IAAI,SAAS,GAAE,cAAa,+BAAU,MAAK;AAAA;AAEtC,MAAM,QAAQ;",
+  "names": []
+}

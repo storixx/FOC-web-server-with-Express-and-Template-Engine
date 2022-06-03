@@ -1,0 +1,7 @@
+<div class="form-check" style="float: right" v-bind='food' style="float: right">
+  <input class="form-check-input" type="checkbox" :checked="food.favourite==true" 
+    @click="changeFavourites(food.id)"></input>
+  <label class="form-check-label" for="flexCheckDefault">
+    Favourite
+  </label>
+</div>

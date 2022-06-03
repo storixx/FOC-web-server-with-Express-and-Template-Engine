@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../routes/menu.js"],
+  "sourcesContent": ["import {Router} from 'express'\nimport {getAll, getOrder, addToOrder, changeFavourite, increase, decrease, removeFromOrder} from '../controllers/menu.js'\n\nconst router = Router()\n\nrouter.get('/api/menu', getAll)\nrouter.get('/api/order', getOrder)\nrouter.post('/api/order/:id', addToOrder)\nrouter.patch('/api/favour/:id', changeFavourite)\nrouter.patch('/api/incr/:id', increase)\nrouter.patch('/api/decr/:id', decrease)\nrouter.delete('/api/order/:id', removeFromOrder)\n\nexport default router"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,qBAAqB;AACrB,kBAAiG;AAEjG,MAAM,SAAS;AAEf,OAAO,IAAI,aAAa;AACxB,OAAO,IAAI,cAAc;AACzB,OAAO,KAAK,kBAAkB;AAC9B,OAAO,MAAM,mBAAmB;AAChC,OAAO,MAAM,iBAAiB;AAC9B,OAAO,MAAM,iBAAiB;AAC9B,OAAO,OAAO,kBAAkB;AAEhC,IAAO,eAAQ;",
+  "names": []
+}

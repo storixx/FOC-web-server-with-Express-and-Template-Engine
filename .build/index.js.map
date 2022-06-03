@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import express from 'express';\nimport path from 'path';\nimport serverRoutes from './routes/menu.js'\nimport {food} from './foodMenu'\n\nconst __dirname1 = path.resolve();\nconst app = express();\n\napp.use(express.static(path.resolve(__dirname1,'static')))\napp.use(serverRoutes)\napp.use(express.json())\napp.use(express.urlencoded({extended: false}))\n\napp.set('view engine', 'ejs')\napp.set('views',path.resolve(__dirname1,'ejs'))\n\napp.get('/', (req, res) => {\n  res.render('pages/mainMenu',{\n    cards:food\n  })\n})\n\napp.get('/order', (req, res) => {\n  res.render('pages/order')\n})\n\napp.get('/favourites', (req, res) => {\n  res.render('pages/favourites',{cards:food})\n})\n\napp.listen(() => { });"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,qBAAoB;AACpB,kBAAiB;AACjB,kBAAyB;AACzB,sBAAmB;AAEnB,MAAM,aAAa,oBAAK;AACxB,MAAM,MAAM;AAEZ,IAAI,IAAI,uBAAQ,OAAO,oBAAK,QAAQ,YAAW;AAC/C,IAAI,IAAI;AACR,IAAI,IAAI,uBAAQ;AAChB,IAAI,IAAI,uBAAQ,WAAW,EAAC,UAAU;AAEtC,IAAI,IAAI,eAAe;AACvB,IAAI,IAAI,SAAQ,oBAAK,QAAQ,YAAW;AAExC,IAAI,IAAI,KAAK,CAAC,KAAK,QAAQ;AACzB,MAAI,OAAO,kBAAiB;AAAA,IAC1B,OAAM;AAAA;AAAA;AAIV,IAAI,IAAI,UAAU,CAAC,KAAK,QAAQ;AAC9B,MAAI,OAAO;AAAA;AAGb,IAAI,IAAI,eAAe,CAAC,KAAK,QAAQ;AACnC,MAAI,OAAO,oBAAmB,EAAC,OAAM;AAAA;AAGvC,IAAI,OAAO,MAAM;AAAA;",
+  "names": []
+}

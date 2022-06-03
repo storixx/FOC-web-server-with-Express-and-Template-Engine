@@ -1,0 +1,17 @@
+<div class="card mb-3" style="max-width: 540px;" v-bind='food'>
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img :src="food.picture" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <%- include('./favouriteButton') %>
+        <h5 class="card-title">{{food.name}}</h5>
+        <%- include('../partials/numberButtons') %>
+        <p class="card-text">{{food.calories}}</p>
+        <button type="button" class="btn btn-outline-success" style="float: right" @click="addToOrder(food.id)">Add to cart</button>
+        <p class="card-text">{{food.price}} $</p>
+      </div>
+    </div>
+  </div>
+</div>

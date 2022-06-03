@@ -1,0 +1,16 @@
+<div class="card mb-3" style="max-width: 540px;" v-bind='ordered'>
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img :src="ordered.picture" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <button type="button" class="btn btn-outline-secondary" style="float: right">{{ordered.number}} pieces</button>
+        <h5 class="card-title">{{ordered.name}}</h5>
+        <p class="card-text">{{ordered.calories}}</p>
+        <button type="button" class="btn btn-outline-success" style="float: right" @click="remove(ordered.id)">Remove</button>
+        <p class="card-text">Total price: {{ordered.price*ordered.number}} $</p>
+      </div>
+    </div>
+  </div>
+</div>
